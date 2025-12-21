@@ -87,6 +87,7 @@
 
         section {
             padding: 60px 10%;
+            scroll-margin-top: 80px; /* ensures nav links scroll correctly below sticky header */
         }
 
         .bg-light {
@@ -243,4 +244,131 @@
 
 <section id="members" class="bg-light">
     <h3>State Members</h3>
-    <div class
+    <div class="members-container">
+        <div class="member-card">
+            <h4>United States</h4>
+            <p>Founding Member State</p>
+            <small>Joined: January 2025</small>
+        </div>
+        <div class="member-card">
+            <h4>European Union</h4>
+            <p>Member State Collective</p>
+            <small>Joined: February 2025</small>
+        </div>
+        <div class="member-card">
+            <h4>Canada</h4>
+            <p>Active Member State</p>
+            <small>Joined: March 2025</small>
+        </div>
+        <div class="member-card">
+            <h4>Australia</h4>
+            <p>Contributing Member State</p>
+            <small>Joined: April 2025</small>
+        </div>
+    </div>
+</section>
+
+<section id="charter">
+    <h3>The VIGIL Charter</h3>
+    <div class="charter-content">
+        <article>
+            <h4>THE VIGIL DECLARATION</h4>
+            <h5>On the Fundamental Rights of All Persons Deprived of Their Liberty</h5>
+            <p><em>Adopted in Geneva on 18 December 2024</em></p>
+            <p>
+                The present Charter establishes VIGIL – Voice for International Guardianship & Institutional Liberty as an independent operational body acting in accordance with the principles and purposes enshrined in the Charter of the United Nations, the Universal Declaration of Human Rights, and relevant international human rights instruments.
+            </p>
+            <p>
+                VIGIL operates as an international institutional framework dedicated to the protection, oversight, and advancement of the fundamental rights of persons deprived of their liberty, ensuring that human dignity is maintained even within the most restrictive institutional frameworks.
+            </p>
+        </article>
+        
+        <article>
+            <h4>LEGAL STATUS AND FOUNDING AUTHORITY</h4>
+            <p>
+                VIGIL is established as an operational agency of the United Nations system, functioning as an independent body with full autonomy in its operational activities. The organization derives its authority from:
+            </p>
+            <ul>
+                <li>The Charter of the United Nations</li>
+                <li>The Universal Declaration of Human Rights</li>
+                <li>International Covenant on Civil and Political Rights</li>
+                <li>Convention Against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment</li>
+                <li>Standard Minimum Rules for the Treatment of Prisoners (Nelson Mandela Rules)</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h4>MISSION AND MANDATE</h4>
+            <p>
+                VIGIL's primary mission is to ensure the protection and promotion of fundamental rights of all persons deprived of their liberty through systematic monitoring, oversight, and advocacy. The organization operates on the fundamental principle that all individuals, regardless of their legal status, retain their inherent human dignity and fundamental rights.
+            </p>
+        </article>
+        
+        <article>
+            <h4>OPERATIONAL PRINCIPLES</h4>
+            <ul>
+                <li><strong>Independence:</strong> VIGIL operates autonomously, free from political interference or institutional pressure</li>
+                <li><strong>Impartiality:</strong> All activities are conducted without discrimination or bias</li>
+                <li><strong>Transparency:</strong> Open reporting and public accountability in all operations</li>
+                <li><strong>Cooperation:</strong> Collaborative engagement with member states and international bodies</li>
+                <li><strong>Prevention:</strong> Proactive measures to prevent human rights violations</li>
+            </ul>
+        </article>
+        
+        <article>
+            <h4>CORE FUNCTIONS AND POWERS</h4>
+            <p>
+                VIGIL is empowered to conduct unannounced visits to all places of detention, interview persons deprived of their liberty in private, and make recommendations for improvements in detention conditions. The organization maintains the authority to publish reports and findings without prior censorship.
+            </p>
+            <p>
+                The organization coordinates with international bodies, national institutions, and civil society organizations to ensure comprehensive protection of detainee rights and to promote best practices in institutional governance.
+            </p>
+        </article>
+    </div>
+</section>
+
+<footer>
+    ©️ 2025 V.I.G.I.L. — All Rights Reserved
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add active state to navigation based on scroll position
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === `#${current}`) {
+                link.style.color = 'var(--un-blue)';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
