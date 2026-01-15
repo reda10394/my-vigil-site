@@ -402,6 +402,60 @@
                 margin: 10px 0;
             }
         }
+
+        /* Styles for Press Release and Database sections */
+        .document {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            border: 1px solid var(--border-light, #e0e0e0);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+            font-family: inherit;
+            color: var(--text-dark, #333);
+        }
+
+        .doc-header {
+            display:flex;
+            justify-content:space-between;
+            align-items:flex-start;
+            gap:20px;
+            margin-bottom:20px;
+            flex-wrap:wrap;
+        }
+
+        .doc-title {
+            color:var(--dark-blue, #003366);
+            font-size:22px;
+            font-weight:700;
+            letter-spacing:1px;
+        }
+
+        .doc-meta {
+            text-align:right;
+            color:#555;
+            font-size:14px;
+        }
+
+        .doc-body {
+            margin-top:20px;
+            line-height:1.8;
+            color:var(--text-dark, #333);
+            white-space:pre-wrap;
+            font-size:15px;
+        }
+
+        /* Database presentation */
+        .db-wrap{display:flex;flex-direction:column;gap:20px;font-family:inherit}
+        .db-section{background:#fff;border:1px solid var(--border-light, #e0e0e0);border-radius:10px;padding:22px;box-shadow:0 8px 24px rgba(0,0,0,0.06)}
+        .db-title{font-size:18px;color:var(--dark-blue, #003366);font-weight:700;margin-bottom:10px;letter-spacing:0.4px}
+        .db-sub{font-size:13px;color:#666;margin-bottom:12px}
+        .db-table{width:100%;border-collapse:collapse;font-size:14px}
+        .db-table th,.db-table td{border:1px solid #eee;padding:10px 12px;text-align:left;vertical-align:top}
+        .db-table thead th{background:linear-gradient(90deg,var(--light-gray,#f4f4f4),#fff);font-weight:700;color:var(--dark-blue,#003366)}
+        .db-table tbody tr:nth-child(even){background:#fafafa}
+        .small-note{font-size:13px;color:#555;margin-top:8px}
+        .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+        @media (max-width:992px){ .grid-2{grid-template-columns:1fr} }
     </style>
 </head>
 <body>
@@ -572,44 +626,189 @@
             </div>
         </section>
 
-        <section id="press">
-            <h3>Press Release</h3>
-            <div class="content-block">
-                <h4>Latest V.I.G.I.L. Press Release</h4>
-                <p>V.I.G.I.L. has issued an emergency directive regarding secret detention sites and moved Krazny Delta to the "Blue List" of critical priority countries following satellite verification of three previously unrecorded "Black Site" facilities.</p>
-                
-                <div class="charter-article">
-                    <h5>Emergency Directive - December 21, 2025</h5>
-                    <p><strong>Reference:</strong> VIGIL/COM/2025/084</p>
-                    <p><strong>Subject:</strong> V.I.G.I.L. Issues Emergency Directive Regarding Secret Detention Sites</p>
-                    <p><strong>Location:</strong> Geneva, Switzerland</p>
-                    <p>The Office of the High Custodian of V.I.G.I.L. has officially moved the Krazny Delta to the "Blue List" of critical priority countries. This decision follows satellite verification of three previously unrecorded "Black Site" facilities.</p>
-                    
-                    <p>"The mandate of V.I.G.I.L. is clear," stated the Executive Director. "When a state chooses to make its citizens disappear, it forfeits its right to digital and physical sovereignty in those specific locations. We are initiating the 'Habeas Corpus' Strike Protocol effective immediately."</p>
-                    
-                    <p><a href="https://www.genspark.ai/api/files/s/7ghN1GOW" target="_blank" style="color: var(--un-blue); text-decoration: none; font-weight: 600;">Download Full Press Release →</a></p>
+        <section id="press" aria-labelledby="press-heading">
+            <h3 id="press-heading">Press Release</h3>
+
+            <div class="content-block document" role="article" aria-label="Press Release: V.I.G.I.L. emergency directive">
+                <div class="doc-header">
+                    <div>
+                        <div class="doc-title">V.I.G.I.L. Issues Emergency Directive Regarding Secret Detention Sites</div>
+                        <div style="color:#666;margin-top:6px;font-size:14px">Reference: VIGIL/COM/2025/084</div>
+                    </div>
+
+                    <div class="doc-meta" aria-hidden="false">
+                        <div>GENEVA</div>
+                        <div>December 21, 2025</div>
+                    </div>
+                </div>
+
+                <div class="doc-body">
+VIGIL
+Voice for International Guardianship
+& Institutional Liberty
+
+An Operational Agency of the United Nations
+
+FOR IMMEDIATE RELEASE Ref: VIGIL/COM/2025/084
+SUBJECT: V.I.G.I.L. ISSUES EMERGENCY DIRECTIVE REGARDING SECRET DETENTION SITES
+GENEVA (December 21, 2025) — Today, the Office of the High Custodian of V.I.G.I.L. has officially moved the Krazny Delta to the "Blue List" of critical priority countries. This decision follows satellite verification of three previously unrecorded "Black Site" facilities.
+
+"The mandate of V.I.G.I.L. is clear," stated the Executive Director. "When a state chooses to make its citizens disappear, it forfeits its right to digital and physical sovereignty in those specific locations. We are initiating the 'Habeas Corpus' Strike Protocol effective immediately."
+
+Under Article 4 of the V.I.G.I.L. Charter, the organization demands:
+· Immediate access for the Secretariat's medical observers.
+· Biometric registration of all detainees into the Global Tracker.
+· The cessation of all incommunicado detention practices.
+
+V.I.G.I.L. reminds all Member States that under the Tallinn Protocol, interference with our digital signals or physical observers constitutes a violation of international law.
+
+About V.I.G.I.L.: The Voice for International Guardianship & Institutional Liberty (V.I.G.I.L.) is an independent, neutral organization headquartered in Geneva. Established to protect the rights of political prisoners and the disappeared, V.I.G.I.L. operates where national legal systems fail. Our mission is to ensure that no human being remains hidden from the light of justice.
                 </div>
             </div>
         </section>
 
-        <section id="database">
-            <h3>V.I.G.I.L. Database</h3>
-            <div class="content-block">
-                <h4>Access to V.I.G.I.L. Database</h4>
-                <p>The V.I.G.I.L. Database contains comprehensive information about member states, institutional partnerships, and operational activities. Access is provided to authorized personnel and partner organizations.</p>
-                
-                <div class="charter-article">
-                    <h5>Database Contents</h5>
-                    <p><strong>Member States Directory:</strong> Complete listing of all V.I.G.I.L. member states with their respective roles and contributions.</p>
-                    <p><strong>Operational Records:</strong> Documentation of V.I.G.I.L. activities, missions, and initiatives across different regions.</p>
-                    <p><strong>Institutional Partnerships:</strong> Information about collaborations with international organizations and agencies.</p>
-                    <p><strong>Legal Framework:</strong> Repository of treaties, conventions, and legal instruments governing V.I.G.I.L. operations.</p>
+        <section id="database" aria-labelledby="database-heading">
+            <h3 id="database-heading">V.I.G.I.L. Database</h3>
+
+            <div class="db-wrap" aria-live="polite">
+                <!-- Organizational Units -->
+                <div class="db-section" role="region" aria-label="Organizational Units">
+                    <div class="db-title">Organizational Units</div>
+                    <div class="db-sub">Units, missions and core responsibilities (extracted from repository file)</div>
+
+                    <table class="db-table" aria-describedby="org-units-desc">
+                        <thead>
+                            <tr><th>Unit</th><th>Mission</th><th>Core Responsibilities</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>The Assembly</td>
+                                <td>Serves as the supreme governing body with high oversight of institutional strategy.</td>
+                                <td>Holds the exclusive authority to move a state to the "Blue List" of critical priority based on satellite verification of unrecorded "Black Sites".</td>
+                            </tr>
+                            <tr>
+                                <td>The Executive Directorate</td>
+                                <td>Acts as the executive organ responsible for the administration and operational efficiency of the organization.</td>
+                                <td>Executes the "Habeas Corpus" Strike Protocol and manages field missions to ensure immediate access for medical observers.</td>
+                            </tr>
+                            <tr>
+                                <td>The Office of the High Custodian</td>
+                                <td>Leads the Presidency and serves as the primary diplomatic representative for external relations.</td>
+                                <td>Issues emergency directives regarding secret detention sites and ensures the physical and digital sovereignty of the mandate is protected.</td>
+                            </tr>
+                            <tr>
+                                <td>The Internal and Technical Audit</td>
+                                <td>Provides independent assessment of the institution's performance and adherence to its core principles.</td>
+                                <td>Verifies the effectiveness of interventions and monitors compliance with the Tallinn Protocol regarding digital signal integrity.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-                <div class="charter-article">
-                    <h5>Access the Database</h5>
-                    <p>The complete V.I.G.I.L. Database is available for download and review by authorized personnel.</p>
-                    <p><a href="V.I.G.I.L DATABASE.xlsx" download="V.I.G.I.L DATABASE.xlsx" style="color: var(--un-blue); text-decoration: none; font-weight: 600;">Access V.I.G.I.L. Database →</a></p>
+                <!-- Members Directory -->
+                <div class="db-section" role="region" aria-label="Members Directory">
+                    <div class="db-title">Members Directory</div>
+                    <div class="db-sub">Country membership, cooperation level and access notes</div>
+
+                    <table class="db-table" aria-describedby="members-desc">
+                        <thead>
+                            <tr><th>Country</th><th>Membership Status</th><th>Cooperation Level</th><th>V.I.G.I.L. Access</th><th>Notes</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Norway</td><td>FULL MEMBER</td><td>Level 5 (TOTAL)</td><td>UNRESTRICTED</td><td>HQ HOST/IMMUNITY GRANTED</td></tr>
+                            <tr><td>Switzerland</td><td>FULL MEMBER</td><td>Level 5 (TOTAL)</td><td>UNRESTRICTED</td><td>LEAD FORENSIC PARTNER</td></tr>
+                            <tr><td>Canada</td><td>FULL MEMBER</td><td>Level 4 (HIGH)</td><td>RESTRICTED</td><td>LOGISTICAL &amp; TRANSPORT PARTNER</td></tr>
+                            <tr><td>Arstotzka</td><td>SUSPENDED</td><td>Level 1 (ZERO)</td><td>DENIED</td><td>ACCESS REVOKED</td></tr>
+                            <tr><td>USA</td><td>PENDING</td><td>Level 2 (LOW)</td><td>OBSERVER</td><td>UNDER REVIEW FOR BLUE LIST</td></tr>
+                            <tr><td>ALGERIA</td><td>SUSPENDED</td><td>Level 1 (ZERO)</td><td>DENIED</td><td>ACCESS REVOKED</td></tr>
+                            <tr><td>SOUDAN</td><td>PENDING</td><td>Level 2 (LOW)</td><td>OBSERVER</td><td>UNDER REVIEW FOR BLUE LIST</td></tr>
+                            <tr><td>MOROCCO</td><td>FULL MEMBER</td><td>Level 5 (TOTAL)</td><td>UNRESTRICTED</td><td>PERMANENT MEMBER</td></tr>
+                            <tr><td>IRAN</td><td>PENDING</td><td>Level 2 (LOW)</td><td>OBSERVER</td><td>UNDER REVIEW FOR BLUE LIST</td></tr>
+                            <tr><td>TUNISIA</td><td>FULL MEMBER</td><td>Level 5 (TOTAL)</td><td>UNRESTRICTED</td><td>PERMANENT MEMBER</td></tr>
+                            <tr><td>RUSSIA</td><td>SUSPENDED</td><td>Level 1 (ZERO)</td><td>DENIED</td><td>ACCESS REVOKED</td></tr>
+                            <tr><td>UKRAINE</td><td>FULL MEMBER</td><td>Level 5 (TOTAL)</td><td>UNRESTRICTED</td><td>PERMANENT MEMBER</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Cases -->
+                <div class="db-section" role="region" aria-label="Operational Cases">
+                    <div class="db-title">Operational Cases</div>
+                    <div class="db-sub">Selected case records (sanitized summary)</div>
+
+                    <table class="db-table" aria-describedby="cases-desc">
+                        <thead>
+                            <tr><th>Case ID</th><th>Subject Name</th><th>Location</th><th>Facility Type</th><th>Detention Status</th><th>Priority</th><th>Last Legal Contact</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>V-2025-01</td><td>J. Doe (Political)</td><td>Arstotzka</td><td>Black Site</td><td>Incommunicado</td><td>CRITICAL</td><td>None (45 days)</td></tr>
+                            <tr><td>V-2025-14</td><td>A. Larsson (Journalist)</td><td>Krazny</td><td>Military Base</td><td>Under Observation</td><td>HIGH</td><td>12-Dec-25</td></tr>
+                            <tr><td>V-2024-88</td><td>S. Al-Fayed (Activist)</td><td>Republic of Osea</td><td>State Prison</td><td>Negotiation Phase</td><td>MEDIUM</td><td>5-Nov-25</td></tr>
+                            <tr><td>V-2025-09</td><td>B. Zhang (Whistleblower)</td><td>Unknown</td><td>Transit</td><td>Missing</td><td>CRITICAL</td><td>N/A</td></tr>
+                            <tr><td>V-2025-22</td><td>M. Kovac (Legal)</td><td>ZLO</td><td>State Prison</td><td>Released/Under Shield</td><td>CLEARED</td><td>20-Dec-25</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="small-note">Note: This page shows structured public-facing summaries. Full operational records are restricted to authorized personnel.</div>
+                </div>
+
+                <!-- Funding & Operational Sectors -->
+                <div class="grid-2" role="region" aria-label="Funding and Operational Sectors">
+                    <div class="db-section">
+                        <div class="db-title">Funding &amp; Revenue</div>
+                        <div class="db-sub">Overview of funding sources and status</div>
+
+                        <table class="db-table" aria-describedby="funding-desc">
+                            <thead>
+                                <tr><th>Funding Source</th><th>Category</th><th>Amount (USD)</th><th>% of Total</th><th>Status</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Member State Dues</td><td>Intergouvernmental</td><td>$145,000,000</td><td>40%</td><td>Confirmed</td></tr>
+                                <tr><td>Freedom Endowment</td><td>Seized Dictator Assets</td><td>$108,750,000</td><td>30%</td><td>Pending Legal Release</td></tr>
+                                <tr><td>Private Philantrophy</td><td>Individual/Trusts</td><td>$72,500,000</td><td>20%</td><td>Received</td></tr>
+                                <tr><td>The Silence Levy</td><td>Corporate Digital Tax</td><td>$36,250,000</td><td>10%</td><td>Quarterly</td></tr>
+                                <tr><td><strong>Total Revenue</strong></td><td></td><td><strong>$362,500,000</strong></td><td><strong>100%</strong></td><td></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="db-section">
+                        <div class="db-title">Operational Sectors &amp; Allocations</div>
+                        <div class="db-sub">High-level allocation of operational funds</div>
+
+                        <table class="db-table" aria-describedby="sectors-desc">
+                            <thead>
+                                <tr><th>Operational Sector</th><th>Description</th><th>Allocation</th><th>Priority</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Tactical Recovery</td><td>Snatch and Grab arrest Operations</td><td>$110,000,000</td><td>Level 1</td></tr>
+                                <tr><td>Legal Advocacy &amp; Writs</td><td>Filing International Habeas Corpus</td><td>$75,000,000</td><td>Level 1</td></tr>
+                                <tr><td>The "Shield" Program</td><td>Post Release Protection</td><td>$65,000,000</td><td>Level 2</td></tr>
+                                <tr><td>Satellite &amp; Cyber Track</td><td>Locating Secret Black Sites</td><td>$55,000,000</td><td>Level 2</td></tr>
+                                <tr><td>Medical Neutrality Units</td><td>On site Prison Doctors</td><td>$40,000,000</td><td>Level 3</td></tr>
+                                <tr><td>Admin &amp; Diplomatic HQ</td><td>Geneva Island Offices</td><td>$17,500,000</td><td>Level 4</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Country Metrics -->
+                <div class="db-section" role="region" aria-label="Country Metrics">
+                    <div class="db-title">Country Metrics &amp; Recommended Interventions</div>
+                    <div class="db-sub">Case density, torture index and recommended action</div>
+
+                    <table class="db-table" aria-describedby="metrics-desc">
+                        <thead>
+                            <tr><th>Country Name</th><th>Case Density</th><th>Torture Index (1/10)</th><th>Legal Access Score (1/5)</th><th>Action Priority</th><th>Recommended Intervention</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Krazny Delta</td><td>42</td><td>9.4</td><td>1</td><td>CRITICAL</td><td>Immediate Tactical Recovery</td></tr>
+                            <tr><td>Republic of Osea</td><td>15</td><td>8.1</td><td>2 (Restricted)</td><td>HIGH</td><td>Diplomatic Ultimatum</td></tr>
+                            <tr><td>Arstotzka</td><td>8</td><td>4.5</td><td>3 (Conditional)</td><td>MEDIUM</td><td>Field Observer Deployment</td></tr>
+                            <tr><td>State of Veridia</td><td>22</td><td>7.8</td><td>1 (Zero)</td><td>CRITICAL</td><td>Cyber Seizure of Assets</td></tr>
+                            <tr><td>Maritime Zone 7</td><td>2</td><td>2</td><td>5 (Open)</td><td>MONITORING</td><td>Routine Medical Audit</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
