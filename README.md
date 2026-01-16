@@ -12,3 +12,4 @@ Responsiveness: Ensuring the layout works perfectly on mobile devices and tablet
 Code Optimization: Cleaning up the existing HTML/CSS structure for better performance.
 
 Accessibility: Improving navigation for users with disabilities (ARIA labels, contrast, etc.).
+https://reda10394.github.io/V.I.G.I.L-Official.site/
